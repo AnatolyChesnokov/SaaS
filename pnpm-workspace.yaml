@@ -1,0 +1,6 @@
+packages:
+  - 'app/**'
+  # if required, exclude directories
+  - '!**/test/**'
+  - '!**/prisma/**'
+  - '!prisma/**'
