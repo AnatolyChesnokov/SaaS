@@ -1,5 +1,5 @@
 import type { ClassValue } from 'clsx'
-import type { LoaderData as RootLoaderData } from '#app/root'
+import { LoaderFunction } from '@remix-run/node'
 import { useFormAction, useNavigation, useRouteLoaderData } from '@remix-run/react'
 import { clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
@@ -15,12 +15,12 @@ export function cn(...inputs: ClassValue[]) {
 /**
  * Use root-loader data.
  */
-function isUser(user: RootLoaderData['data']['user']) {
+function isUser(user: { id: unknown }) {
   return user && typeof user === 'object' && typeof user.id === 'string'
 }
 
 export function useOptionalUser() {
-  const loaderData = useRouteLoaderData<RootLoaderData>('root')
+  const loaderData = useRouteLoaderData<LoaderFunction>('root')
   if (!loaderData || !isUser(loaderData.data.user)) return undefined
   return loaderData.data.user
 }
