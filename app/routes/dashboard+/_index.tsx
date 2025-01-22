@@ -1,11 +1,9 @@
 import type { MetaFunction, LoaderFunctionArgs } from '@remix-run/node'
-import { Plus, ExternalLink } from 'lucide-react'
+import { Plus } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { requireUser } from '#app/modules/auth/auth.server'
 import { prisma } from '#app/utils/db.server'
-import { cn } from '#app/utils/misc.js'
 import { siteConfig } from '#app/utils/constants/brand'
-import { buttonVariants } from '#app/components/ui/button'
 
 export const meta: MetaFunction = () => {
   return [{ title: `${siteConfig.siteTitle} - Dashboard` }]

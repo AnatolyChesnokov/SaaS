@@ -8,7 +8,6 @@ import {
   Check,
   Settings,
   LogOut,
-  Star,
 } from 'lucide-react'
 import { PLANS } from '#app/modules/stripe/plans'
 import { useRequestInfo } from '#app/utils/hooks/use-request-info'
