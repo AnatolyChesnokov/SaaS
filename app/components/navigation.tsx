@@ -1,14 +1,7 @@
 import type { LoaderData as AdminLoaderData } from '#app/routes/admin+/_layout'
 import type { LoaderData as DashboardLoaderData } from '#app/routes/dashboard+/_layout'
 import { Link, useLocation, useSubmit, useNavigate } from '@remix-run/react'
-import {
-  ChevronUp,
-  ChevronDown,
-  Slash,
-  Check,
-  Settings,
-  LogOut,
-} from 'lucide-react'
+import { ChevronUp, ChevronDown, Slash, Check, Settings, LogOut } from 'lucide-react'
 import { PLANS } from '#app/modules/stripe/plans'
 import { useRequestInfo } from '#app/utils/hooks/use-request-info'
 import { userHasRole, getUserImgSrc, cn } from '#app/utils/misc'

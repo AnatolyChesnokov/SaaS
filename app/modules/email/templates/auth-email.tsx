@@ -86,9 +86,7 @@ export function AuthEmail({ code, magicLink }: AuthEmailOptions) {
             {code}
           </code>
           <Hr style={{ margin: '20px 0', borderColor: '#cccccc' }} />
-          <Text style={{ color: '#8898aa', fontSize: '12px' }}>
-            200
-          </Text>
+          <Text style={{ color: '#8898aa', fontSize: '12px' }}>200</Text>
         </Container>
       </Body>
     </Html>

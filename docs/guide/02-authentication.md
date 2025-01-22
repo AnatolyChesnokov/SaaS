@@ -81,5 +81,3 @@ If you want to learn more about `remix-auth-totp` and `remix-auth-github`, pleas
 
 - [Remix Auth TOTP](https://github.com/dev-xo/remix-auth-totp): A Time-Based One-Time Password (TOTP) Authentication Strategy for Remix-Auth.
 - [Remix Auth Github](https://github.com/sergiodxa/remix-auth-github): A GitHubStrategy for Remix Auth, based on the OAuth2Strategy.
-
-

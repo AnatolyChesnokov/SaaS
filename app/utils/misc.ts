@@ -93,17 +93,17 @@ export function callAll<Args extends Array<unknown>>(
  */
 export function debounce<Args extends Array<unknown>, ReturnType>(
   fn: (...args: Args) => ReturnType,
-  delay: number
+  delay: number,
 ): (...args: Args) => void {
-  let timer: NodeJS.Timeout | null = null;
+  let timer: NodeJS.Timeout | null = null
 
   return (...args: Args) => {
-    if (timer) clearTimeout(timer);
+    if (timer) clearTimeout(timer)
     timer = setTimeout(() => {
-      timer = null;
-      fn(...args); // Контекст `this` автоматически сохраняется
-    }, delay);
-  };
+      timer = null
+      fn(...args) // Контекст `this` автоматически сохраняется
+    }, delay)
+  }
 }
 
 /**
@@ -131,44 +131,43 @@ export function debounce<Args extends Array<unknown>, ReturnType>(
 export function deepClone<T>(value: T): T {
   // Примитивы и null
   if (value === null || typeof value !== 'object') {
-    return value;
+    return value
   }
 
   // Дата
   if (value instanceof Date) {
-    return new Date(value.getTime()) as T;
+    return new Date(value.getTime()) as T
   }
 
   // Множества
   if (value instanceof Set) {
-    return new Set(Array.from(value, deepClone)) as T;
+    return new Set(Array.from(value, deepClone)) as T
   }
 
   // Карты
   if (value instanceof Map) {
     return new Map(
-      Array.from(value.entries(), ([key, val]) => [deepClone(key), deepClone(val)])
-    ) as T;
+      Array.from(value.entries(), ([key, val]) => [deepClone(key), deepClone(val)]),
+    ) as T
   }
 
   // Регулярные выражения
   if (value instanceof RegExp) {
-    return new RegExp(value.source, value.flags) as T;
+    return new RegExp(value.source, value.flags) as T
   }
 
   // Массивы
   if (Array.isArray(value)) {
-    return value.map(deepClone) as T;
+    return value.map(deepClone) as T
   }
 
   // Объекты
-  const result: Record<string, unknown> = Object.create(Object.getPrototypeOf(value));
+  const result: Record<string, unknown> = Object.create(Object.getPrototypeOf(value))
   for (const key in value) {
     if (Object.prototype.hasOwnProperty.call(value, key)) {
-      result[key] = deepClone((value as Record<string, unknown>)[key]);
+      result[key] = deepClone((value as Record<string, unknown>)[key])
     }
   }
 
-  return result as T;
+  return result as T
 }
-

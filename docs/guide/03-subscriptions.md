@@ -50,5 +50,3 @@ Yes, you can customize Subscriptions in Remix SaaS by editing the following file
 Sadly no, although Remix SaaS is built to be flexible, it's currently only compatible with Stripe.
 
 - There are plans to add more Payment Providers in the future, like [Lemon Squeezy](https://www.lemonsqueezy.com/), or [Paddle](https://www.paddle.com/).
-
-

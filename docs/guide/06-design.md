@@ -29,5 +29,3 @@ The `misc` folder contains miscellaneous components that are used throughout the
 You can customize the design by editing the styles in the `root.css` file.
 
 - Importing [`shadcn/themes`](https://ui.shadcn.com/themes) is a good starting point to customize the initial design.
-
-

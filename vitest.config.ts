@@ -1,9 +1,10 @@
 /// <reference types="vitest" />
 /// <reference types="vite/client" />
 
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config';
 import tsconfigPaths from 'vite-tsconfig-paths'
 
+/** @type {import('vite').UserConfig} */
 export default defineConfig({
   plugins: [tsconfigPaths()],
   test: {

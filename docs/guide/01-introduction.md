@@ -61,5 +61,3 @@ With newly Remix additions, the initial Stack was left behind _(due to the lack 
 Huge thanks to [@mw10013](https://github.com/mw10013) who nowadays is my partner in other Remix related project, and who helped build a big part of the new Stack, in the same way he helped with [`remix-auth-totp`](https://github.com/dev-xo/remix-auth-totp).
 
 With this said, I hope you enjoy Remix SaaS and hope it helps you to kickstart your next SaaS project! ❤️
-
-

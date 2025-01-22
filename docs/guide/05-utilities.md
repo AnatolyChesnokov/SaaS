@@ -66,5 +66,3 @@ Toasts are a way to display messages to the user. They are defined in the `/util
 - `redirectWithToast`: A utility to redirect with a toast message.
 
 There are a few more utilities available in the `/utils` directory. You can explore them to see how they can help you manage your application.
-
-
