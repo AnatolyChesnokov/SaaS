@@ -28,7 +28,7 @@ export const SchemaStep = ({ schemaStr, setSchemaStr, loading, handleSchemaSubmi
                       <textarea
                           value={schemaStr}
                           onChange={(e) => setSchemaStr(e.target.value)}
-                          className="w-full h-96 bg-gray-900/50 text-white font-mono text-sm rounded-lg border border-white/10 p-4 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
+                          className="w-full h-96 bg-gray-900/50 text-white font-mono text-sm rounded-lg border border-white/10 p-4 focus:outline-none focus:ring-2 focus:ring-indigo-600/50"
                           placeholder="Enter your JSON schema here..."
                       />
                         </div>
@@ -43,7 +43,7 @@ export const SchemaStep = ({ schemaStr, setSchemaStr, loading, handleSchemaSubmi
                             <button
                                 onClick={handleSchemaSubmit}
                                 disabled={!schemaStr || loading}
-                                className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 rounded-lg text-sm font-medium text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-600 rounded-lg text-sm font-medium text-white disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 Continue
                             </button>

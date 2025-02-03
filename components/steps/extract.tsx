@@ -43,7 +43,7 @@ export const ExtractStep = ({ extractedData, setRouteInput, loading, query, setS
                                     setRouteInput(query.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, ''));
                                 }}
                                 disabled={!extractedData || loading}
-                                className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 rounded-lg text-sm font-medium text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-600 rounded-lg text-sm font-medium text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                             >
                                 Deploy API
                             </button>

@@ -49,7 +49,7 @@ export const DeployStep = ({ isDeployed, routeInput, setRouteInput, loading, war
                                         <button
                                             onClick={handleDeploy}
                                             disabled={!routeInput || loading}
-                                            className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 rounded-lg text-sm font-medium text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                                            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-600 rounded-lg text-sm font-medium text-white disabled:opacity-50 disabled:cursor-not-allowed"
                                         >
                                             Deploy API
                                         </button>
@@ -57,8 +57,8 @@ export const DeployStep = ({ isDeployed, routeInput, setRouteInput, loading, war
                                 </div>
                             ) : (
                                 <div className="space-y-6">
-                                    <div className="p-4 bg-emerald-500/20 border border-emerald-500/30 rounded-lg">
-                                        <div className="flex items-center space-x-2 text-emerald-500">
+                                    <div className="p-4 bg-indigo-600/20 border border-indigo-600/30 rounded-lg">
+                                        <div className="flex items-center space-x-2 text-indigo-600">
                                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                                             </svg>
@@ -70,7 +70,7 @@ export const DeployStep = ({ isDeployed, routeInput, setRouteInput, loading, war
                                         <p className="text-sm text-white/60">Your API is ready! Here's your endpoint:</p>
                                         <div className="p-4 bg-white/5 rounded-lg">
                                             <div className="flex items-center justify-between">
-                                                <code className="text-sm text-emerald-500">
+                                                <code className="text-sm text-indigo-600">
                                                     {getApiUrl(deployedRoute)}
                                                 </code>
                                                 <div className="flex items-center space-x-2">

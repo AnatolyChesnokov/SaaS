@@ -46,7 +46,7 @@ export function CronScheduler({ initialValue = '0 0 * * *', onScheduleChange }: 
               key={option.value}
               className={`relative flex flex-col h-24 px-6 py-4 rounded-xl cursor-pointer transition-all ${
                 selectedPreset === option.value
-                  ? 'bg-emerald-500/20 border-2 border-emerald-500 shadow-lg shadow-emerald-500/10'
+                  ? 'bg-indigo-600/20 border-2 border-indigo-600 shadow-lg shadow-indigo-600/10'
                   : 'bg-white/5 border border-white/10 hover:border-white/20 hover:bg-white/10'
               }`}
             >
@@ -62,7 +62,7 @@ export function CronScheduler({ initialValue = '0 0 * * *', onScheduleChange }: 
                 <div className="flex items-start justify-between">
                   <div className="text-sm font-medium text-white">{option.label}</div>
                   {selectedPreset === option.value && (
-                    <div className="text-emerald-500 -mt-1 -mr-1">
+                    <div className="text-indigo-600 -mt-1 -mr-1">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>

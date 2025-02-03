@@ -42,7 +42,7 @@ export const SourcesStep = ({
                     <input
                         type="text"
                         placeholder="Search for additional sources..."
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-indigo-600/50"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
@@ -62,17 +62,17 @@ export const SourcesStep = ({
             {/* Custom URL input */}
             <div className="px-6 pb-6">
                 <div
-                    className={`bg-white/5 backdrop-blur-sm rounded-lg p-6 border ${customUrl ? 'border-emerald-500' : 'border-white/10'}`}>
+                    className={`bg-white/5 backdrop-blur-sm rounded-lg p-6 border ${customUrl ? 'border-indigo-600' : 'border-white/10'}`}>
                     <div className="space-y-4">
                         <input
                             type="text"
                             placeholder="Enter a custom URL..."
-                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
+                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-indigo-600/50"
                             value={customUrl}
                             onChange={(e) => setCustomUrl(e.target.value)}
                         />
                         {customUrl && (
-                            <div className="flex items-center space-x-2 text-emerald-500">
+                            <div className="flex items-center space-x-2 text-indigo-600">
                                 <CheckIcon className="w-5 h-5" aria-hidden="true"/>
                                 <span className="text-sm">Custom URL is set</span>
                             </div>
@@ -87,7 +87,7 @@ export const SourcesStep = ({
                     {isTransitioning ? (
                         <div className="flex flex-col items-center justify-center py-12">
                             <div className="flex items-center justify-center mb-4">
-                                <svg className="animate-spin h-8 w-8 text-emerald-500" xmlns="http://www.w3.org/2000/svg"
+                                <svg className="animate-spin h-8 w-8 text-indigo-600" xmlns="http://www.w3.org/2000/svg"
                                      fill="none" viewBox="0 0 24 24">
                                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
                                             strokeWidth="4"></circle>
@@ -107,7 +107,7 @@ export const SourcesStep = ({
                             {searchResults.map((result, index) => (
                                 <div
                                     key={index}
-                                    className={`bg-white/5 hover:bg-white/10 rounded-lg p-4 cursor-pointer transition-all ${result.selected ? 'ring-2 ring-emerald-500' : ''
+                                    className={`bg-white/5 hover:bg-white/10 rounded-lg p-4 cursor-pointer transition-all ${result.selected ? 'ring-2 ring-indigo-600' : ''
                                     }`}
                                     onClick={() => toggleResult(index)}
                                 >
@@ -119,7 +119,7 @@ export const SourcesStep = ({
                                         </div>
                                         <div className="flex items-center space-x-2">
                                             <div className={`p-1.5 rounded-md ${result.selected
-                                                ? 'bg-emerald-500 text-white'
+                                                ? 'bg-indigo-600 text-white'
                                                 : 'bg-white/5 hover:bg-white/10 text-white/60'
                                             }`}>
                                                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -159,7 +159,7 @@ export const SourcesStep = ({
                         <button
                             onClick={handleSourcesSubmit}
                             disabled={!searchResults.some(r => r.selected) || isTransitioning}
-                            className="px-4 py-2 bg-emerald-500 hover:bg-emerald-600 rounded-lg text-sm font-medium text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-600 rounded-lg text-sm font-medium text-white disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             Continue
                         </button>
